@@ -1,5 +1,8 @@
 <h1>Hello Rals</h1>
   <div>
-    <%= link_to "プロフィールを編集する", profiles_edit_url %>
+    <%= link_to "自己紹介を編集する", profiles_new_url %>
     <%= link_to "スキルを編集する", skills_edit_url %>
+    <% @profile.each do |comment|%>
+      <%= comment.text%>
+    <% end %>
   </div>

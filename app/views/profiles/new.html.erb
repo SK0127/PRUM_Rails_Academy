@@ -1,0 +1,12 @@
+<div>
+  <h1>プロフィールを編集edit</h1>
+  <div>
+    <%= form_with model: @post, local: true do |form| %>
+      <p><%= form.label :text %><br>
+        <%= form.text_area :text, value: @title  %>
+      </p>
+      <p><%= form.submit "自己紹介を確定する"%>
+      </p>
+    <% end %>
+  </div>
+</div>
