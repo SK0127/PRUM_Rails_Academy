@@ -24,6 +24,10 @@
   color: white;
 }
 
-#header_left h1 {
+#header_title  {
   margin: 0;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
 }

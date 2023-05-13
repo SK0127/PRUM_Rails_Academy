@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'top#index'
 
   get 'profiles/new', to: 'profiles#new'

@@ -12,7 +12,13 @@
   <body>
     <div id="header">
       <div id="header_left">
-        <h1>My Portfolio</h1>
+        <%= link_to "My Portfolio", root_path, id: "header_title" %>
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_url, method: :delete %>
+          <%= link_to "ログイン情報更新", edit_user_registration_url %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_url %>
+        <% end %>
       </div>
     </div>
     <%= yield %>
