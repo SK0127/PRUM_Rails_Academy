@@ -3,10 +3,12 @@
   <div>
     <%= form_with model: @post, local: true do |form| %>
       <p><%= form.label :text %><br>
-        <%= form.text_area :text, value: @title  %>
+         <%= form.text_area :text%>
+        <%= form.label :image, "画像ファイルを添付する" %>
+          <%= form.file_field :image ,style:"display:none;"%>
       </p>
-      <p><%= form.submit "自己紹介を確定する"%>
-      </p>
+      <p><%= form.submit "自己紹介を確定する"%></p>
+  </div>
     <% end %>
   </div>
 </div>

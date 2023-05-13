@@ -4,5 +4,6 @@
     <%= link_to "スキルを編集する", skills_edit_url %>
     <% @profile.each do |comment|%>
       <%= comment.text%>
+      <%= image_tag comment.image.thumb.url %>
     <% end %>
   </div>

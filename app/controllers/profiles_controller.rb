@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
 
   private
   def profile_params #ストロングパラメータ
-    params.require(:profile).permit(:text) #パラメーターのキー
+    params.require(:profile).permit(:text,:image) #パラメーターのキー
   end
   
 end
