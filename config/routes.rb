@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post 'profiles', to: 'profiles#create'
   get 'skills/edit', to: 'skills#edit'
   get 'skills/new', to: 'skills#new'
+  post 'skills', to: 'skills#create'
 end
