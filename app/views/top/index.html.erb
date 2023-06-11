@@ -1,9 +1,36 @@
 <h1>Hello Rals</h1>
   <div>
     <%= link_to "自己紹介を編集する", profiles_new_url %>
-    <%= link_to "スキルを編集する", skills_edit_url %>
+    <%= link_to "スキルを編集する", edit_skills_url %>
     <% @profile.each do |comment|%>
       <%= comment.text%>
       <%= image_tag comment.image.thumb.url %>
     <% end %>
   </div>
+
+
+
+
+
+
+
+
+<%
+=begin
+%>
+
+  <h1>Hello Rals</h1>
+  <div>
+   <% @skill.each do |post| %>
+    <%= link_to "自己紹介を編集する", profiles_new_url %>
+    <%= link_to "スキルを編集する", edit_skill_url(post) %>
+    <% end %>
+    
+    <% @profile.each do |comment|%>
+      <%= comment.text%>
+      <%= image_tag comment.image.thumb.url %>
+    <% end %>
+  </div>
+<%
+=end
+%>

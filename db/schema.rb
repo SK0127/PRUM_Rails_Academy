@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_14_062534) do
+ActiveRecord::Schema.define(version: 2023_05_20_093110) do
 
   create_table "profiles", force: :cascade do |t|
     t.text "text"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2023_05_14_062534) do
     t.string "skill_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "skill_type"
   end
 
   create_table "users", force: :cascade do |t|
