@@ -3,12 +3,8 @@ Rails.application.routes.draw do
   root 'top#index'
   get 'profiles/new', to: 'profiles#new'
   post 'profiles', to: 'profiles#create'
-  # get 'skills/edit', to: 'skills#edit'
-  # get 'skills/new', to: 'skills#new'
-  # post 'skills', to: 'skills#create'
-  # post 'skills', to: 'skills#update'
-  # delete 'skills', to: 'skills#destroy'
-
+  get 'skills/new_flontend', to: 'skills#new_flontend'
+  get 'skills/new_backend', to: 'skills#new_backend'
   resource :skills, only: [:edit]
   resources :skills, only: [:create, :new, :update, :destroy]
 
@@ -17,7 +13,11 @@ end
 
 
 
-
+  # get 'skills/edit', to: 'skills#edit'
+  # get 'skills/new', to: 'skills#new'
+  # post 'skills', to: 'skills#create'
+  # post 'skills', to: 'skills#update'
+  # delete 'skills', to: 'skills#destroy'
 
   # resource :skills, only: [:edit]
   # resources :skills, only: [:create, :new, :edit, :update, :destroy]

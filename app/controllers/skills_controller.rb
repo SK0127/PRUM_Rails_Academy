@@ -1,6 +1,14 @@
 class SkillsController < ApplicationController
   
-  def new
+  def new 
+    @post = Skill.new
+  end
+
+  def new_flontend
+    @post = Skill.new
+  end
+
+  def new_backend
     @post = Skill.new
   end
 
@@ -11,7 +19,7 @@ class SkillsController < ApplicationController
   end
   
   def edit
-    @skill = Skill.all
+    @skills = Skill.all
   end
 
   def update
@@ -32,7 +40,7 @@ class SkillsController < ApplicationController
 
   private
   def profile_params #ストロングパラメータ
-    params.require(:skill).permit(:id,:skill_name,:skill_level) #パラメーターのキー
+    params.require(:skill).permit(:id,:skill_name,:skill_level,:skill_type) #パラメーターのキー
   end
   
   
