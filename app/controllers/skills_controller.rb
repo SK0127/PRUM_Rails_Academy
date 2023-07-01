@@ -15,7 +15,8 @@ class SkillsController < ApplicationController
   def create
     @post = Skill.new(profile_params) #データを新規登録するためのインスタンス生成
     @post.save #データをデータベースに保存するためのsaveメソッド実行
-    redirect_to root_path #トップ画面へリダイレクト
+    
+    # redirect_to edit_skills_path #トップ画面へリダイレクト
   end
   
   def edit
@@ -24,17 +25,20 @@ class SkillsController < ApplicationController
 
   def update
     @skill = Skill.find(params[:id])
-    if @skill.update(profile_params)
-      redirect_to request.referer
-    else
-      render :new
-    end
+    @skill.update(profile_params)
+    # if @skill.update(profile_params)
+    #   redirect_to request.referer
+    # else
+    #   render :new
+    # end
   end
 
   def destroy
+    # // --------------完成品１ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
     @skill = Skill.find(params[:id])
     @skill.destroy
-    redirect_to request.referer
+    # // --------------完成品１ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
   end
 
 

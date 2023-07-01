@@ -1,8 +1,8 @@
 class TopController < ApplicationController
 
 def index
-  @profile = Profile.order(updated_at: :desc).limit(1).where.not(image: nil)
-
+  @profile = Profile.where.not(text: '').order(created_at: :desc).first
+  @image = Profile.where.not(image: nil).order(created_at: :desc).first
 end
 
 end

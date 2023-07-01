@@ -2,10 +2,8 @@
   <div>
     <%= link_to "自己紹介を編集する", profiles_new_url %>
     <%= link_to "スキルを編集する", edit_skills_url %>
-    <% @profile.each do |comment|%>
-      <%= comment.text%>
-      <%= image_tag comment.image.thumb.url %>
-    <% end %>
+      <%= @profile.text %>
+      <%= image_tag @image.image.thumb.url %>
   </div>
 
 
