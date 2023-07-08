@@ -1,3 +1,155 @@
 // Place all the styles related to the top controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#main {
+  padding-top: 80px;
+}
+
+.chart_g {
+  margin-top: 80px;
+  height: 500px;
+  position: relative;
+}
+
+#myChart {
+  width: 1046px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+#top_img {
+  width: 360px;
+  height: 360px;
+  border-radius: 360px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+#main_top {
+  margin: 0 19%;
+}
+
+#profile_group {
+  display: flex;
+}
+
+#profile_group_left {
+  
+}
+
+#profile_text_notlogin {
+  color: red;
+}
+
+#profile_group_right {
+  padding-left: 80px;
+  width: 520px;
+}
+
+#profile_title{
+  margin: 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 36px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#underline {
+  width: 240px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.50);
+}
+
+#profile_text {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+#profile_edit {
+  display: flex;
+  padding: 16px 40px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--primary-color, #1B5678);
+  width: 170px;
+}
+
+#profile_edit a {
+  color: #FFF;
+  font-size: 18px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 170px;
+  text-decoration: none;
+}
+
+
+#main_bottom {
+  margin-top: 120px
+}
+
+#skill_edit_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#skill_edit_title {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 36px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+#skill_underline{
+  width: 400px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.50);
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#skill_edit_link {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--primary-color, #1B5678);
+  width: 170px;
+  margin-top: 20px;
+}
+
+#skill_edit_link a {
+  text-align: center;
+  color: #FFF;
+  font-size: 18px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 170px;
+  text-decoration: none;
+}
+

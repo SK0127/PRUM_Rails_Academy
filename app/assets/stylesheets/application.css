@@ -20,14 +20,44 @@
 }
 
 #header {
-  background-color: #326070;
+  background-color: #1B5678;
   color: white;
+  height: 120px;
+  display: flex;
 }
 
-#header_title  {
+#header_left {
+padding: 0 40px;
+padding-top: 30px;
+width: 50%;
+}
+
+#header_right {
+  padding: 0 40px;
+  padding-top: 40px;
+  width: 50%;
+  text-align: right;
+}
+
+#header_title {
   margin: 0;
   text-decoration: none;
   font-size: 30px;
   color: white;
   font-weight: bold;
 }
+
+.logout_link {
+  padding: 16px 40px;
+  border-radius: 4px;
+  background: var(--white, #FFF);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 18px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+

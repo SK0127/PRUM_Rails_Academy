@@ -14,14 +14,16 @@
     <div id="header">
       <div id="header_left">
         <%= link_to "My Portfolio", root_path, id: "header_title" %>
+      </div>
+      <div id="header_right">
         <% if user_signed_in? %>
-          <%= link_to "ログアウト", destroy_user_session_url, method: :delete %>
-          <%= link_to "ログイン情報更新", edit_user_registration_url %>
+          <%= link_to "ログアウト", destroy_user_session_url, class: 'logout_link', method: :delete %>
         <% else %>
-          <%= link_to "ログイン", new_user_session_url %>
+          <%= link_to "ログイン", new_user_session_url, class: 'logout_link' %>
         <% end %>
       </div>
     </div>
     <%= yield %>
   </body>
 </html>
+<%# <%= link_to "ログイン情報更新", edit_user_registration_url %> 

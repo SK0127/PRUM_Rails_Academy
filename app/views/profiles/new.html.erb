@@ -1,13 +1,26 @@
-<div>
-  <h1>プロフィールを編集edit</h1>
-  <div>
-    <%= form_with model: @post, local: true do |form| %>
-      <p><%= form.label :text %><br>
-         <%= form.text_area :text%>
-         <%= form.label :image, "画像ファイルを添付する" %>
-         <%= form.file_field :image ,style:"display:none;"%>
-      </p>
-      <p><%= form.submit "自己紹介を確定する"%></p>
+<div id="profile_edit_main">
+  <div id="profile_edit_title">
+    <p>自己紹介を編集する</p>
+  </div>
+  <div id="profile_edit_form_group">
+    <div id="profile_edit_form">
+      <%= form_with model: @post, local: true,id:"foo" do |form| %>
+        <p><%= form.label :text, "自己紹介文" %><br>
+          <%= form.text_area :text%>
+          <p id="profile_form_underline"></p>
+          <p id="form_text_limit">
+            <%= form.label :text, "200文字以上、800文字未満で入力してください" %><br>
+          </p>
+          <%= form.label :image, "アバター画像" %><br>
+          <p id="abc">
+            <%= form.label :image, "画像ファイルを添付する",id: "aaa" %>
+          </p>
+          <%= form.file_field :image ,style:"display:none;"%>
+        </p>
+        <p id="profile_form_submit_group">
+          <button type='submit' id="profile_form_submit">自己紹介を確定する</button>
+        </p>
+    </div>
   </div>
     <% end %>
   </div>

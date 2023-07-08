@@ -1,34 +1,125 @@
-<h1>Hello Rals</h1>
-  <div>
-    <%= link_to "自己紹介を編集する", profiles_new_url %>
-    <%= link_to "スキルを編集する", edit_skills_url %>
-      <%= @profile.text %>
-      <%= image_tag @image.image.thumb.url %>
-  </div>
 
 
-
-
-
-
-
-
-<%
-=begin
-%>
-
-  <h1>Hello Rals</h1>
-  <div>
-   <% @skill.each do |post| %>
-    <%= link_to "自己紹介を編集する", profiles_new_url %>
-    <%= link_to "スキルを編集する", edit_skill_url(post) %>
-    <% end %>
+  <div id="main">
+    <div id="main_top">
+      <div id="profile_group">
+        <div id="profile_group_left">
+          <% if user_signed_in? %>
+            <%= image_tag @image.image.thumb.url,id: "top_img"%>
+          <% else%>
+            <div id="top_img"></div>
+          <%end%>
+        </div>
+        <div id="profile_group_right">
+          <p id="profile_title">自己紹介</p>
+          <p id="underline"></p>
+          <div id="profile_text">
+            <% if user_signed_in? %>
+              <%= @profile.text.truncate(80, omission: '...') %>
+            <% else%>
+              <p id="profile_text_notlogin">ログインして,自己紹介文と画像を登録しましょう！</p>
+            <%end%>
+          </div>
+          <% if user_signed_in? %>
+          <span id="profile_edit">
+            <%= link_to "自己紹介を編集する", profiles_new_url %>
+          <% else%>
+          <%end%>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div id="main_bottom">
+      <div id="skill_edit_group">
+        <div id="skill_edit_title">スキルチャート
+          <p id="skill_underline"></p>
+        </div>
+        <% if user_signed_in? %>
+          <div id="skill_edit_link">
+            <%= link_to "スキルを編集する", edit_skills_url %>
+          </div>
+        <% else%>
+        <%end%>
+      </div>
+    </div>
     
-    <% @profile.each do |comment|%>
-      <%= comment.text%>
-      <%= image_tag comment.image.thumb.url %>
-    <% end %>
+    <% array_1 = [] %>
+    <% array_2 = [] %>
+    <% array_3 = [] %>
+    
+    <% @skill_1.each do |skill|%>
+    <% array_1 << skill.skill_level.to_i %>
+    <%end%>
+    <% aaa_1 = array_1.sum %>
+
+
+    <% @skill_2.each do |skill|%>
+    <% array_2 << skill.skill_level.to_i %>
+    <%end%>
+    <% aaa_2 = array_2.sum %>
+
+
+    <% @skill_3.each do |skill|%>
+    <% array_3 << skill.skill_level.to_i %>
+    <%end%>
+    <% aaa_3 = array_3.sum %>
+
+
+
+    <div class="chart_g">
+      <canvas id="myChart"></canvas>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script>
+      var ctx = document.getElementById('myChart');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['january', 'February', 'March'],
+              datasets: [{
+                  label: 'フロント',
+                  data: [<%= aaa_1 %>, <%= aaa_1 %>, <%= aaa_1 %>],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                  ],
+                  borderWidth: 1
+              },
+              {
+                  label: 'バックエンド',
+                  data: [<%= aaa_2 %>, <%= aaa_2 %>, <%= aaa_2 %>],
+                  backgroundColor: [
+                      'rgba(54, 162, 235, 0.2)',
+                  ],
+                  borderColor: [
+                      'rgba(54, 162, 235, 1)',
+                  ],
+                  borderWidth: 1
+              },
+              {
+                  label: 'インフラ',
+                  data: [<%= aaa_3 %>, <%= aaa_3 %>, <%= aaa_3 %>],
+                  backgroundColor: [
+                      'rgba(255, 206, 86, 0.2)',
+                  ],
+                  borderColor: [
+                      'rgba(255, 206, 86, 1)',
+                  ],
+                  borderWidth: 1
+              }
+              ],
+              
+          },
+
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+      </script>
+    </div>
   </div>
-<%
-=end
-%>

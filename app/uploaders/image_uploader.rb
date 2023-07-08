@@ -7,17 +7,17 @@ class ImageUploader < CarrierWave::Uploader::Base
   storage :file
   # storage :fog
   include CarrierWave::MiniMagick
-  process resize_to_fit: [400, 200]
+  process resize_to_fit: [360, 360]
 
   def extension_allowlist
     %w(jpg jpeg gif png)
   end
 
   version :thumb do 
-    process resize_to_fit: [200, 200] 
+    process resize_to_fit: [360, 360]
   end 
  version :thumb50 do 
-   process resize_to_fit: [100, 100] 
+   process resize_to_fit: [360, 360]
   end 
 
   # Override the directory where uploaded files will be stored.
