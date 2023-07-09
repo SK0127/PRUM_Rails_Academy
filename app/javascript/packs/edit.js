@@ -6,17 +6,17 @@ $(document).on('turbolinks:load', function(){
   // #modal-openがクリックされたらモーダルウィンドウを表示
   $(".delete_flontend").on('click',function(){
       // #modal-overlayをフェードイン(display: none; → block;)させる
-      $('.flontend').append('フロントエンドを削除しました');
+      $('.flontend').append('フロントエンドを削除しました!');
       $(".modal").fadeIn();
     });
   $(".delete_backend").on('click',function(){
     // #modal-overlayをフェードイン(display: none; → block;)させる
-    $('.backend').append('バックエンドを削除しました');
+    $('.backend').append('バックエンドを削除しました!');
     $(".modal").fadeIn();
   });
   $(".delete_infura").on('click',function(){
     // #modal-overlayをフェードイン(display: none; → block;)させる
-    $('.infura').append('インフラを削除しました');
+    $('.infura').append('インフラを削除しました!');
     $(".modal").fadeIn();
   });
 // -------------------delete_modal------------------------------------------
@@ -24,17 +24,17 @@ $(document).on('turbolinks:load', function(){
 // ---------------update_modal------------------------------------------
   $(".update_flontend").on('click',function(){
     // #modal-overlayをフェードイン(display: none; → block;)させる
-    $('.flontend').append('フロントエンドを更新しました');
+    $('.flontend').append('フロントエンドを更新しました!');
     $(".modal").fadeIn();
   });
   $(".update_backend").on('click',function(){
     // #modal-overlayをフェードイン(display: none; → block;)させる
-    $('.backend').append('バックエンドを更新しました');
+    $('.backend').append('バックエンドを更新しました!');
     $(".modal").fadeIn();
   });
   $(".update_infura").on('click',function(){
     // #modal-overlayをフェードイン(display: none; → block;)させる
-    $('.infura').append('インフラを更新しました');
+    $('.infura').append('インフラを更新しました!');
     $(".modal").fadeIn();
   });
 // ---------------update_modal------------------------------------------
@@ -42,17 +42,17 @@ $(document).on('turbolinks:load', function(){
 // ---------------create_modal------------------------------------------
 $(".create_flontend").on('click',function(){
   // #modal-overlayをフェードイン(display: none; → block;)させる
-  $('.flontend').append('フロントエンドにスキルを追加しました');
+  $('.flontend').append('フロントエンドにスキルを追加しました!');
   $(".modal").fadeIn();
 });
 $(".create_backend").on('click',function(){
   // #modal-overlayをフェードイン(display: none; → block;)させる
-  $('.backend').append('バックエンドにスキルを追加しました');
+  $('.backend').append('バックエンドにスキルを追加しました!');
   $(".modal").fadeIn();
 });
 $(".create_infura").on('click',function(){
   // #modal-overlayをフェードイン(display: none; → block;)させる
-  $('.infura').append('インフラにスキルを追加しました');
+  $('.infura').append('インフラにスキルを追加しました!');
   $(".modal").fadeIn();
 });
 // ---------------create_modal------------------------------------------

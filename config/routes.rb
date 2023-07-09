@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'skills/new_backend', to: 'skills#new_backend'
   resource :skills, only: [:edit]
   resources :skills, only: [:create, :new, :update, :destroy]
-
+  
 end
 
 

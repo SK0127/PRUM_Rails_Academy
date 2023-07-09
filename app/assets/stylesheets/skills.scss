@@ -2,22 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-#backend {
-  width: 80%;
-  
-}
-
-#backend_title {
-  font-size: 25px;
-  text-decoration: underline;
-}
-
-
-
-
-
-
-
 
 // -------------ここからモーダル (
 body {
@@ -37,7 +21,8 @@ body {
 
 
 .close {
-  background-color: red;
+  border-radius: 4px;
+  background: var(--primary-color, #1B5678);
 }
 
 .modal {
@@ -64,14 +49,251 @@ body {
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
+}
 
+.flontend {
+  margin-top: 70px;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.infura {
+  margin-top: 70px;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.backend {
+  margin-top: 70px;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.close {
+  width: 35%;
+}
+
+.close p {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+// -------------ここまでモーダル
+
+#new_skill_title {
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.4%;
 }
 
 
+.new_skill_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.skill_field {
+  width: 480px;
+  height: 48px;
+  align-self: stretch;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.skill_field {
+  width: 480px;
+  height: 48px;
+  align-self: stretch;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.new_skill_underline {
+  width: 480px;
+  height: 1px;
+  opacity: 0.41999998688697815;
+  background: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.new_skill_label {
+  margin: 0;
+  color: var(--text-secondary, rgba(0, 0, 0, 0.54));
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.15
+}
+
+.skill_level_label {
+  margin-top: 5px;
+}
+
+.new_skill_form {
+  margin-bottom: 48px;
+}
 
 
+// -------------edit.html.erb-----------------
+
+#main_skill_group {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#flontend_group {
+  margin: 20px 0px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.50);
+  
+}
+
+#flontend_group_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px;
+}
+
+#flontend_title {
+  color: rgba(0, 0, 0, 0.75);
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: start;
+}
+
+#flontend_underline {
+  width: 240px;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.50);
+  margin-top: 16px;
+}
+
+#flontend_create_link {
+  display: flex;
+  padding: 16px 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: var(--primary-color, #1B5678);
+}
+
+#flontend_create_link a {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
 
 
-// -------------ここからモーダル
+#flontend_form_skill_label {
+  height: 80px;
+  box-shadow: 1px 1px 1px #E0E0E0;
+  margin: 0px 20px;
+  border: 0.8px solid #E0E0E0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+#flontend_form_group {
+  height: 80px;
+  box-shadow: 1px 1px 3px #E0E0E0;
+  margin: 0px 20px;
+  border: 0.8px solid #E0E0E0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
 
+.a {
+  width: 25%;
+  display: flex;
+  padding: 16px 16px 16px 60px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skill_form_level {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--other-border, rgba(0, 0, 0, 0.23));
+  color: var(--text-secondary, rgba(0, 0, 0, 0.54));
+  font-family: Roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+}
+
+.update_flontend {
+  display: flex;
+  width: 100%;
+  padding: 7px 16px;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: stretch;
+  color: var(--primary-color, #1B5678);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: #FFF;
+  border-radius: 4px;
+  border: 1px solid var(--primary-color, #1B5678);
+  background: var(--white, #FFF);
+
+}
+
+.delete_flontend {
+  display: flex;
+  width: 100%;
+  padding: 7px 0;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: stretch;
+  border-radius: 4px;
+  background: var(--secondary-color, #EE6969);
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
