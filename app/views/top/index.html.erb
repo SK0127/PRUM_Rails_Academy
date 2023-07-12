@@ -5,7 +5,7 @@
       <div id="profile_group">
         <div id="profile_group_left">
           <% if user_signed_in? %>
-            <p>image</p>
+            <%= image_tag @image.image.thumb.url,id: "top_img"%>
           <% else%>
             <div id="top_img"></div>
           <%end%>
@@ -15,7 +15,7 @@
           <p id="underline"></p>
           <div id="profile_text">
             <% if user_signed_in? %>
-             <p>test</p>
+             <%= @profile.text.truncate(80, omission: '...') %>
             <% else%>
               <p id="profile_text_notlogin">ログインして,自己紹介文と画像を登録しましょう！</p>
             <%end%>
