@@ -7,30 +7,4 @@ Rails.application.routes.draw do
   get 'skills/new_backend', to: 'skills#new_backend'
   resource :skills, only: [:edit]
   resources :skills, only: [:create, :new, :update, :destroy]
-  
 end
-
-
-
-
-  # get 'skills/edit', to: 'skills#edit'
-  # get 'skills/new', to: 'skills#new'
-  # post 'skills', to: 'skills#create'
-  # post 'skills', to: 'skills#update'
-  # delete 'skills', to: 'skills#destroy'
-
-  # resource :skills, only: [:edit]
-  # resources :skills, only: [:create, :new, :edit, :update, :destroy]
-
-
-
-  # -----------------------------------------------------------------------------------------
-  # ルーティングは          resources :skills, only: [:create, :new, :edit, :update, :destroy]の方がいいのか？
-  # 実際
-
-  # editを間違えてupdateに飛ばさずcreateに飛ばしてしまっていた。
-  # 現在、editメソットのが上手くidを取得できず進めていない。そもそも、editはidを取る必要があるのか。
-  # skill登録のupdate自体はidがとれないと正確に更新できない、、？？
-
-  # rails sは停止した。
-  # -----------------------------------------------------------------------------------------
